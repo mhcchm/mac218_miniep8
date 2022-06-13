@@ -18,12 +18,16 @@ bool eh_primo(int p){
     if(p == 1)
         return false;
 
+    for(int i=2;i<=p/2;i++){
+        if(p % i == 0)
+            return false;
+    }
+
     return true;
 }
 
 static void teste1(){
     assert(eh_primo(1) == false);
-
 }
 
 static void teste2(){
