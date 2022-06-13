@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
 }
 
 bool eh_primo(int p){
-    if(p == 1)
+    if(p <= 1)
         return false;
 
     for(int i=2;i<=p/2;i++){
