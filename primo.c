@@ -3,7 +3,16 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-static void testa();
+static void teste1();
+static void teste2();
+static void teste3();
+bool eh_primo(int p);
+
+int main(int argc, char *argv[]){
+    teste1();
+    teste2();
+    teste3();
+}
 
 bool eh_primo(int p){
     if(p == 1)
@@ -12,16 +21,21 @@ bool eh_primo(int p){
     return true;
 }
 
-int main(int argc, char *argv[]){
-    testa();
-}
-
-static void testa(){
+static void teste1(){
     assert(eh_primo(1) == false);
 
+}
+
+static void teste2(){
     assert(eh_primo(2) == true);
 
     assert(eh_primo(3) == true);
 
     assert(eh_primo(5) == true);
+}
+
+static void teste3(){
+    assert(eh_primo(4) == false);
+    assert(eh_primo(8) == false);
+    assert(eh_primo(16) == false);
 }
