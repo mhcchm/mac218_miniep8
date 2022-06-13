@@ -6,12 +6,14 @@
 static void teste1();
 static void teste2();
 static void teste3();
+static void teste4();
 bool eh_primo(int p);
 
 int main(int argc, char *argv[]){
     teste1();
     teste2();
     teste3();
+    teste4();
 }
 
 bool eh_primo(int p){
@@ -42,4 +44,8 @@ static void teste3(){
     assert(eh_primo(4) == false);
     assert(eh_primo(8) == false);
     assert(eh_primo(16) == false);
+}
+
+static void teste4(){
+    assert(eh_primo(-1) == false);
 }
